@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhansu Smooth Travels | 24x7 Cab Booking Sambalpur</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; padding: 2.5rem 1rem; }
+        header h1 { font-size: 2rem; margin-bottom: 0.4rem; letter-spacing: 0.5px; }
+        header p { font-size: 1rem; opacity: 0.9; }
+        .badge { display: inline-block; background: #25D366; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-top: 10px; }
+        .container { max-width: 750px; margin: -25px auto 30px; padding: 0 15px; }
+        .card { background: #fff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 25px; margin-bottom: 20px; }
+        h2 { color: #203a43; margin-bottom: 15px; font-size: 1.3rem; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.95rem; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .btn-whatsapp { width: 100%; background: #25D366; color: white; border: none; padding: 14px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .btn-whatsapp:hover { background: #1ebe5d; }
+        .fleet-box { display: flex; justify-content: space-between; align-items: center; background: #eef5f9; padding: 15px; border-radius: 8px; border-left: 4px solid #2c5364; }
+        .routes { list-style: none; }
+        .routes li { padding: 8px 0; border-bottom: 1px dashed #ddd; display: flex; justify-content: space-between; }
+        footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #666; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sudhansu Smooth Travels</h1>
+    <p>Reliable 24x7 Outstation & Local Cab Service — Dhama, Sambalpur</p>
+    <span class="badge">📞 Call / WhatsApp: +91 91789 61602</span>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Book Your Ride Instantly</h2>
+        <form id="bookingForm" onsubmit="sendWhatsApp(event)">
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="custName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="custPhone" placeholder="10-digit mobile number" required>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" id="pickup" value="Sambalpur / Dhama" required>
+                </div>
+                <div class="form-group">
+                    <label>Drop Destination</label>
+                    <select id="drop" required>
+                        <option value="Bhubaneswar">Bhubaneswar</option>
+                        <option value="Puri">Puri</option>
+                        <option value="Khordha">Khordha</option>
+                        <option value="Jharsuguda Airport">Jharsuguda Airport</option>
+                        <option value="Sambalpur Local">Sambalpur Local / Huma</option>
+                        <option value="Other Outstation">Other (Specify on WhatsApp)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Travel Date</label>
+                    <input type="date" id="travelDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Trip Type</label>
+                    <select id="tripType">
+                        <option value="One Way Drop">One Way Drop</option>
+                        <option value="Round Trip">Round Trip</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-whatsapp">📲 Book Now via WhatsApp</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Our Featured Vehicle</h2>
+        <div class="fleet-box">
+            <div>
+                <strong>Maruti Suzuki Ertiga VXi (White)</strong><br>
+                <small>7-Seater AC • Comfortable Long-Distance Cruiser • Clean & Well-Maintained</small>
+            </div>
+            <strong>AC / 7-Seater</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Popular Routes from Sambalpur & Dhama</h2>
+        <ul class="routes">
+            <li><span>Sambalpur / Dhama ➔ Bhubaneswar</span> <strong>24x7 Available</strong></li>
+            <li><span>Sambalpur / Dhama ➔ Puri</span> <strong>24x7 Available</strong></li>
+            <li><span>Sambalpur / Dhama ➔ Khordha</span> <strong>24x7 Available</strong></li>
+            <li><span>Huma Temple & Local Sightseeing</span> <strong>Hourly / Full Day</strong></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Sudhansu Smooth Travels</strong> | Huma, Dhama, Sambalpur, Odisha - 768113</p>
+    <p>Email: sudhansusagar90@gmail.com | Phone: 9178961602</p>
+</footer>
+
+<script>
+    function sendWhatsApp(e) {
+        e.preventDefault();
+        const name = document.getElementById('custName').value;
+        const phone = document.getElementById('custPhone').value;
+        const pickup = document.getElementById('pickup').value;
+        const drop = document.getElementById('drop').value;
+        const date = document.getElementById('travelDate').value;
+        const type = document.getElementById('tripType').value;
+
+        const message = `*New Cab Booking Request*%0A` +
+                        `--------------------------%0A` +
+                        `*Name:* ${name}%0A` +
+                        `*Phone:* ${phone}%0A` +
+                        `*Pickup:* ${pickup}%0A` +
+                        `*Drop:* ${drop}%0A` +
+                        `*Date:* ${date}%0A` +
+                        `*Trip Type:* ${type}%0A` +
+                        `*Vehicle:* Maruti Ertiga`;
+
+        window.open(`https://wa.me/919178961602?text=${message}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
